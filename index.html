@@ -9,16 +9,16 @@
 <style>
 /* Layout: coluna única e calma; a "linha dupla" artéria/veia (como no Doppler colorido) marca as seções */
 :root{
-  --bg:#f5f7f8; --surface:#ffffff; --ink:#16212c; --muted:#56636f; --line:#d9e0e5;
+  --bg:#f5f7f8; --surface:#ffffff; --navy:#0A1E46; --ink:#16212c; --muted:#56636f; --line:#d9e0e5;
   --vein:#2a5b8c; --artery:#b0313b; --wa:#147a46; --wa-fg:#ffffff; --tint:#e9eff5;
   --f-display:"Bricolage Grotesque",system-ui,sans-serif;
   --f-body:"Atkinson Hyperlegible",system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0e151c; --surface:#151f29; --ink:#e7edf2; --muted:#a2b0bc; --line:#26333f;
+  --bg:#0e151c; --surface:#151f29; --navy:#cfdcf2; --ink:#e7edf2; --muted:#a2b0bc; --line:#26333f;
   --vein:#7fb0e0; --artery:#ef6f78; --wa:#1d9a5a; --wa-fg:#ffffff; --tint:#1b2834; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0e151c; --surface:#151f29; --ink:#e7edf2; --muted:#a2b0bc; --line:#26333f;
+  --bg:#0e151c; --surface:#151f29; --navy:#cfdcf2; --ink:#e7edf2; --muted:#a2b0bc; --line:#26333f;
   --vein:#7fb0e0; --artery:#ef6f78; --wa:#1d9a5a; --wa-fg:#ffffff; --tint:#1b2834; color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:18px;line-height:1.6;
@@ -38,10 +38,10 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--vein);outline-offse
 .flow::before{background:var(--artery)}
 .flow::after{background:var(--vein)}
 
-header{padding-block:22px 6px;display:flex;justify-content:space-between;align-items:baseline;gap:8px 16px;flex-wrap:wrap}
-.brand{display:inline-flex;align-items:center;gap:10px;font-family:"Inter",system-ui,sans-serif;font-weight:400;font-size:1.25rem;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+header{padding-block:24px 4px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+.brand{display:inline-flex;flex-direction:column;align-items:center;gap:8px;font-family:"Inter",system-ui,sans-serif;font-weight:400;font-size:1.5rem;letter-spacing:-.01em;color:var(--navy);text-decoration:none}
 .brand b{font-weight:800}
-.brand img{width:44px;height:44px;flex:none}
+.brand img{width:72px;height:72px;flex:none}
 .reg{font-size:.85rem;color:var(--muted)}
 
 .hero{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:center;padding-block:32px 48px}
@@ -106,7 +106,7 @@ footer strong{color:var(--ink)}
 
 <div class="wrap">
 <header>
-  <a class="brand" href="#inicio"><img src="logo-circulo.png" alt="" width="44" height="44"><span>Manhanelli<b>Vascular</b></span></a>
+  <a class="brand" href="#inicio"><img src="logo-circulo.png" alt="" width="72" height="72"><span>Manhanelli<b>Vascular</b></span></a>
   <p class="reg">Dr. Marcos Manhanelli · CREMESP 130.132 · RQE 67.014</p>
 </header>
 
